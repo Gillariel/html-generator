@@ -1,11 +1,10 @@
 {
-  "name": "@do-react/report-generator",
-  "version": "1.0.9",
+  "name": "html-generator",
+  "version": "1.0.0",
   "description": "Convert .template file using custom template engine and autosave it as PDF",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "tokenRefresh": "vsts-npm-auth -config .npmrc",
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -14,8 +13,7 @@
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add *",
-    "postversion": "git push && git push --tags",
-    "prepublish": "npm run tokenRefresh"
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "PDF",
@@ -23,7 +21,7 @@
     "report"
   ],
   "author": "Nathan Foerster",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "moment": "^2.27.0"
   },
